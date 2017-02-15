@@ -13,8 +13,16 @@ let app = new Vue({
             this.dates.sort((date1, date2) => {
                 date1 = new Date(date1);
                 date2 = new Date(date2);
-                
-                return date1.getDate() + date1.getMonth() < date2.getDate() + date2.getMonth();
+
+                if (date1.getMonth() == date2.getMonth()) {
+                    return date1.getDate() < date2.getDate();
+                }
+                else if (date1.getMonth() > date2.getMonth()) {
+                    return false;
+                }
+                else {
+                    return true;
+                }
             });
         },
         createTask: function(title, date) {
