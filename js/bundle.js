@@ -23,7 +23,7 @@ let app = new Vue({
                 return;
             }
 
-            this.tasks.push({ title: title, date: date});
+            this.tasks.push({ title: title, date: date, isCompleted: false});
             this.dates.push(date);    
 
             this.dates = _.uniq(this.dates);

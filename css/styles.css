@@ -3,3 +3,7 @@
 * {
     font-family: "Roboto"
 }
+
+.line-through {
+    text-decoration: line-through
+}
